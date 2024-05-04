@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    text-align: center;
+}
+button {
+    width: 43px;
+    height: 20px;
+}
+progress {
+    width: 90%;
+    height: 20px;
+}
+</style>
+
+<script type="text/javascript">      
+    function setup(htmlComponent) {
+        let btn = document.getElementById("nextButton");
+        htmlComponent.Data = 0;
+        btn.addEventListener("click", function(event) {
+            let progress = htmlComponent.Data;
+            progress = Math.min(progress+25,100);
+            document.getElementById("progressBar").value = progress;
+            htmlComponent.Data = progress;
+        }); 
+    }
+</script>
+</head>
+
+<body>
+    <button id="nextButton">Next</button>
+    <br>
+    <progress id="progressBar" value="0" max="100"></progress> 
+</body>	
+</html>
