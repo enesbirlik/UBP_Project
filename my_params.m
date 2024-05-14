@@ -1,5 +1,7 @@
 Freq=50;
 Vampl=325;
+freq=50;
+vgen=325;
 w=2*pi*Freq;
 Rs=2;
 R1r=1.7;
